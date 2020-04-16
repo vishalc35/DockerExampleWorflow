@@ -7,9 +7,6 @@ services:
 before_install:
    - docker build -t vishalc35/dockerexampleworkflow -f Dockerfile.dev .
 
-script:
-    - docker run vishalc35/dockerexampleworkflow npm run test -- --coverage
-
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
